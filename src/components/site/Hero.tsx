@@ -46,7 +46,7 @@ export function Hero() {
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass mb-6">
             <Sparkles className="w-4 h-4 text-accent" />
             <span className="text-xs uppercase tracking-[0.25em] text-muted-foreground">
-              Manufacturing Excellence • Since 2024
+              Manufacturing Excellence • Since 2025
             </span>
           </div>
 
