@@ -23,7 +23,7 @@ export function Contact() {
             {[
               { icon: User, label: "Contact Person", value: "Fareed" },
               { icon: MapPin, label: "Address", value: "Meerut, Uttar Pradesh, India" },
-              { icon: Phone, label: "Phone", value: "+91 90000 00000", href: "tel:+910000000000" },
+              { icon: Phone, label: "Phone", value: "+91 74172 71092", href: "tel:+917417271092" },
               { icon: Mail, label: "Email", value: "info@technieengineers.in", href: "mailto:info@technieengineers.in" },
             ].map((c, i) => (
               <motion.a
@@ -46,7 +46,7 @@ export function Contact() {
             ))}
             <div className="flex gap-3 pt-2">
               <Button variant="hero" className="flex-1" asChild>
-                <a href="tel:+910000000000"><Phone className="w-4 h-4" /> Call Now</a>
+                <a href="tel:+917417271092"><Phone className="w-4 h-4" /> Call Now</a>
               </Button>
               <Button variant="glass" className="flex-1" asChild>
                 <a href="mailto:info@technieengineers.in"><Mail className="w-4 h-4" /> Email</a>
