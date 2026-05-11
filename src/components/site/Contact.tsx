@@ -21,7 +21,7 @@ export function Contact() {
         <div className="grid lg:grid-cols-2 gap-8">
           <div className="space-y-4">
             {[
-              { icon: User, label: "Contact Person", value: "Fareed" },
+              { icon: User, label: "Contact Person", value: "Anish Pushpan" },
               { icon: MapPin, label: "Address", value: "Meerut, Uttar Pradesh, India" },
               { icon: Phone, label: "Phone", value: "+91 74172 71092", href: "tel:+917417271092" },
               { icon: Mail, label: "Email", value: "info@technieengineers.in", href: "mailto:info@technieengineers.in" },
