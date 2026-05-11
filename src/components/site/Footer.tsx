@@ -40,7 +40,7 @@ export function Footer() {
             <ul className="space-y-2 text-sm text-muted-foreground">
               <li>Meerut, Uttar Pradesh</li>
               <li>India</li>
-              <li><a href="tel:+910000000000" className="hover:text-primary">+91 90000 00000</a></li>
+              <li><a href="tel:+917417271092" className="hover:text-primary">+91 74172 71092</a></li>
               <li><a href="mailto:info@technieengineers.in" className="hover:text-primary">info@technieengineers.in</a></li>
             </ul>
           </div>
