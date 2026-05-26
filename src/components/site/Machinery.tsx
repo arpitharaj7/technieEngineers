@@ -7,10 +7,12 @@ import oil from "@/assets/machine-oil.jpg";
 import edible from "@/assets/machine-edible.jpg";
 
 const machines = [
-  { img: mustard, title: "Mustard Oil Filter Machine", specs: ["Capacity: 50–500 L/hr", "Power: 3–7.5 HP", "Stainless body"] },
-  { img: vito, title: "Vito 30 Oil Filter Machine", specs: ["Compact tabletop", "Auto filtration", "Food-grade SS"] },
-  { img: oil, title: "Oil Filter Machine", specs: ["Continuous duty", "Heavy frame", "Custom voltage"] },
-  { img: edible, title: "Edible Oil Filter Machine", specs: ["Hygienic design", "Easy clean", "FSSAI-ready"] },
+  { img: mustard, title: "Pot Cum PTFE Bearing", specs: ["High load capacity", "Rotational movement support", "Structural stability"] },
+  { img: vito, title: "Elastomeric Bearing", specs: ["Vibration absorption", "Durable elastomer layers", "Bridge load distribution"] },
+  { img: oil, title: "Expansion Joint", specs: ["Smooth structural movement", "Weather-resistant sealing", "Long service life"] },
+  { img: edible, title: "Spherical Bearing", specs: ["Multidirectional rotation", "Thermal movement support", "Seismic compatibility"] },
+  { img: mustard, title: "Pin Bearing", specs: ["Rotational flexibility", "Horizontal load transfer", "Precision-engineered steel"] },
+  { img: vito, title: "Rocker Cum Roller Bearing", specs: ["Controlled bridge movement", "Heavy-duty roller system", "High load endurance"] },
 ];
 
 export function Machinery() {
@@ -24,13 +26,13 @@ export function Machinery() {
           viewport={{ once: true }}
           className="max-w-2xl mb-16"
         >
-          <span className="text-xs uppercase tracking-[0.3em] text-accent">Featured Machinery</span>
+          <span className="text-xs uppercase tracking-[0.3em] text-accent">Bridge Engineering Products</span>
           <h2 className="mt-4 text-4xl sm:text-5xl lg:text-6xl font-bold">
-            Production-grade <span className="text-gradient-fire">machines.</span>
+            Engineered for <span className="text-gradient-fire">movement, stability & strength.</span>
           </h2>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-6">
+        <div className="grid md:grid-cols-3 gap-6">
           {machines.map((m, i) => (
             <motion.div
               key={m.title}
@@ -40,8 +42,8 @@ export function Machinery() {
               transition={{ delay: i * 0.1 }}
               className="group relative rounded-3xl glass overflow-hidden hover:shadow-[0_0_60px_oklch(0.72_0.18_55/0.25)] transition-all duration-500"
             >
-              <div className="grid sm:grid-cols-5">
-                <div className="sm:col-span-2 aspect-video sm:aspect-auto overflow-hidden bg-muted">
+              <div className="flex flex-col">
+                <div className="aspect-video overflow-hidden bg-muted">
                   <img
                     src={m.img}
                     alt={m.title}
@@ -49,8 +51,8 @@ export function Machinery() {
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                   />
                 </div>
-                <div className="sm:col-span-3 p-6 flex flex-col">
-                  <h3 className="font-display text-xl font-semibold">{m.title}</h3>
+                <div className="p-6 flex flex-col">
+                  <h3 className="font-display text-lg font-semibold">{m.title}</h3>
                   <ul className="mt-4 space-y-2 flex-1">
                     {m.specs.map((s) => (
                       <li key={s} className="flex items-center gap-2 text-sm text-muted-foreground">

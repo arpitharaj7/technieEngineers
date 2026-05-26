@@ -1,35 +1,18 @@
-import { motion, useInView, useMotionValue, animate } from "framer-motion";
-import { useEffect, useRef } from "react";
+import { motion } from "framer-motion";
 import { Building2, Briefcase, TrendingUp, FileCheck, Users, Award, Truck, ShieldCheck } from "lucide-react";
-
-function Counter({ to, suffix = "" }: { to: number; suffix?: string }) {
-  const ref = useRef<HTMLSpanElement>(null);
-  const inView = useInView(ref, { once: true });
-  const mv = useMotionValue(0);
-  useEffect(() => {
-    if (!inView) return;
-    const c = animate(mv, to, {
-      duration: 2,
-      ease: "easeOut",
-      onUpdate: (v) => { if (ref.current) ref.current.textContent = Math.floor(v) + suffix; },
-    });
-    return c.stop;
-  }, [inView, to, suffix, mv]);
-  return <span ref={ref}>0{suffix}</span>;
-}
 
 const facts = [
   { icon: Building2, label: "Nature of Business", value: "Manufacturer" },
   { icon: Briefcase, label: "Legal Status", value: "Partnership" },
-  { icon: TrendingUp, label: "Annual Turnover", value: "0 - 40 L" },
-  { icon: FileCheck, label: "GST Registered", value: "Mar 2024" },
+  { icon: FileCheck, label: "Approval Status", value: "RDSO Approved" },
+  { icon: ShieldCheck, label: "Certification", value: "ISO 9001:2015" },
 ];
 
 const stats = [
-  { icon: Users, value: 100, suffix: "+", label: "Industrial Clients" },
-  { icon: Award, value: 500, suffix: "+", label: "Projects Completed" },
-  { icon: Truck, value: 99, suffix: "%", label: "Fast Delivery" },
-  { icon: ShieldCheck, value: 100, suffix: "%", label: "Quality Assurance" },
+  { icon: Users, label: "Leadership Experience", value: "12+ Years" },
+  { icon: Truck, label: "Infrastructure Expertise", value: "Railway & Highway Projects" },
+  { icon: TrendingUp, label: "Project Execution", value: "Timely Delivery" },
+  { icon: Award, label: "Manufacturing Standards", value: "Quality Assured" },
 ];
 
 export function About() {
@@ -53,9 +36,9 @@ export function About() {
             powered by <span className="text-gradient-fire">trust</span>.
           </h2>
           <p className="mt-6 text-lg text-muted-foreground leading-relaxed">
-            Technie Engineers provides the best range of industrial springs, control valves,
-            fabrication services, and oil extraction machines — engineered with effective and
-            timely delivery to keep your operations running.
+            Technie Engineers is an RDSO-approved engineering firm engaged in the
+            manufacturing, supply, testing, and installation of bridge bearings, expansion
+            joints, and steel fabrication works for railway and infrastructure projects.
           </p>
         </motion.div>
 
@@ -91,10 +74,8 @@ export function About() {
               >
                 <div className="absolute -right-6 -bottom-6 w-32 h-32 rounded-full bg-primary/5 group-hover:bg-primary/15 transition-colors" />
                 <s.icon className="w-8 h-8 text-accent mb-3 relative" />
-                <div className="font-display text-4xl font-bold text-gradient-teal relative">
-                  <Counter to={s.value} suffix={s.suffix} />
-                </div>
-                <div className="mt-1 text-sm text-muted-foreground relative">{s.label}</div>
+                <div className="mt-1 text-xl font-display font-semibold text-gradient-teal relative">{s.value}</div>
+                <div className="mt-2 text-sm text-muted-foreground relative">{s.label}</div>
               </motion.div>
             ))}
           </div>

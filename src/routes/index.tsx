@@ -3,7 +3,6 @@ import { Toaster } from "@/components/ui/sonner";
 import { Navbar } from "@/components/site/Navbar";
 import { Hero } from "@/components/site/Hero";
 import { About } from "@/components/site/About";
-import { Products } from "@/components/site/Products";
 import { Machinery } from "@/components/site/Machinery";
 import { WhyUs } from "@/components/site/WhyUs";
 import { Gallery } from "@/components/site/Gallery";
@@ -18,14 +17,14 @@ export const Route = createFileRoute("/")({
   component: Index,
   head: () => ({
     meta: [
-      { title: "Technie Engineers — Industrial Springs, Valves & Oil Machinery | Meerut" },
+      { title: "Technie Engineers — Bridge Bearings, Expansion Joints & Infrastructure Solutions" },
       {
         name: "description",
         content:
-          "Technie Engineers manufactures industrial springs, control valves, train parts, fabrication services, and oil extraction machines from Meerut, India.",
+          "Technie Engineers provides RDSO-approved bridge bearings, expansion joints, and bridge rehabilitation systems from Meerut, India.",
       },
-      { property: "og:title", content: "Technie Engineers — Precision Engineering & Fabrication" },
-      { property: "og:description", content: "Premium industrial manufacturing solutions with effective and timely delivery." },
+      { property: "og:title", content: "Technie Engineers — Bridge Bearings & Infrastructure Solutions" },
+      { property: "og:description", content: "Premium bridge bearing, expansion joint, and infrastructure rehabilitation expertise delivered from Meerut." },
     ],
   }),
 });
@@ -38,7 +37,6 @@ function Index() {
       <main>
         <Hero />
         <About />
-        <Products />
         <Machinery />
         <WhyUs />
         <Gallery />

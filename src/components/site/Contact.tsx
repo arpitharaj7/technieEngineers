@@ -21,10 +21,11 @@ export function Contact() {
         <div className="grid lg:grid-cols-2 gap-8">
           <div className="space-y-4">
             {[
-              { icon: User, label: "Contact Person", value: "Anish Pushpan" },
-              { icon: MapPin, label: "Address", value: "Meerut, Uttar Pradesh, India" },
-              { icon: Phone, label: "Phone", value: "+91 74172 71092", href: "tel:+917417271092" },
-              { icon: Mail, label: "Email", value: "info@technieengineers.in", href: "mailto:info@technieengineers.in" },
+              { icon: User, label: "Contact Team", value: "Engineering Team" },
+              { icon: MapPin, label: "Office Address", value: "G-123, Dwarka Dham, Shivaya Modipuram, Meerut (U.P)" },
+              { icon: MapPin, label: "Works Unit", value: "Plot No. G-56, Phase-1, UPSIDC Industrial Area, Ghaziabad (U.P)" },
+              { icon: Phone, label: "Phone", value: "+91 9058871092, +91 7017985564", href: "tel:+919058871092" },
+              { icon: Mail, label: "Email", value: "technieengineers@gmail.com", href: "mailto:technieengineers@gmail.com" },
             ].map((c, i) => (
               <motion.a
                 key={c.label}
@@ -46,10 +47,10 @@ export function Contact() {
             ))}
             <div className="flex gap-3 pt-2">
               <Button variant="hero" className="flex-1" asChild>
-                <a href="tel:+917417271092"><Phone className="w-4 h-4" /> Call Now</a>
+                <a href="tel:+919058871092"><Phone className="w-4 h-4" /> Call Now</a>
               </Button>
               <Button variant="glass" className="flex-1" asChild>
-                <a href="mailto:info@technieengineers.in"><Mail className="w-4 h-4" /> Email</a>
+                <a href="mailto:technieengineers@gmail.com"><Mail className="w-4 h-4" /> Email</a>
               </Button>
             </div>
           </div>
@@ -62,7 +63,7 @@ export function Contact() {
           >
             <iframe
               title="Technie Engineers location"
-              src="https://www.google.com/maps?q=Meerut,Uttar+Pradesh,India&output=embed"
+              src="https://www.google.com/maps?q=G-123%2C+Dwarka+Dham%2C+Shivaya+Modipuram%2C+Meerut%2C+Uttar+Pradesh%2C+India&output=embed"
               className="w-full h-full border-0 grayscale-[0.4] contrast-110"
               loading="lazy"
             />

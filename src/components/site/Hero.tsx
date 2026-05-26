@@ -43,71 +43,48 @@ export function Hero() {
           transition={{ duration: 0.8, delay: 0.3 }}
           className="max-w-3xl"
         >
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass mb-6">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass mb-4">
             <Sparkles className="w-4 h-4 text-accent" />
             <span className="text-xs uppercase tracking-[0.25em] text-muted-foreground">
-              Manufacturing Excellence • Since 2025
+              we make the heart of bridges
             </span>
           </div>
 
+          <div className="flex flex-wrap gap-3 mb-8">
+            <div className="rounded-full border border-border bg-background/80 px-4 py-2 text-xs sm:text-sm font-medium text-foreground shadow-sm">
+              RDSO Approved Firm
+            </div>
+            <div className="rounded-full border border-border bg-background/80 px-4 py-2 text-xs sm:text-sm font-medium text-foreground shadow-sm">
+              ISO 9001:2015 Certified
+            </div>
+          </div>
+
           <h1 className="font-display text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-bold leading-[1.05] tracking-tight">
-            Precision{" "}
             <span className="text-gradient-teal">Engineering</span>
             <br />
-            & Industrial{" "}
-            <span className="text-gradient-fire">Fabrication</span>
+            Strength Into
+            <br />
+            <span className="text-gradient-fire">Every Structure</span>
           </h1>
 
           <p className="mt-8 text-lg sm:text-xl text-muted-foreground max-w-2xl leading-relaxed">
-            From industrial springs and control valves to custom oil extraction machines —
-            Technie Engineers delivers built-to-last solutions with effective and timely delivery.
+            RDSO-approved bridge bearing and expansion joint specialists trusted across railway,
+            highway, and infrastructure projects.
           </p>
 
           <div className="mt-10 flex flex-wrap gap-4">
             <Button variant="hero" size="xl" asChild>
-              <a href="#products">
-                Explore Products <ArrowRight className="w-5 h-5" />
+              <a href="#machinery">
+                Explore Solutions <ArrowRight className="w-5 h-5" />
               </a>
             </Button>
             <Button variant="glass" size="xl" asChild>
               <a href="#quote">Get a Quote</a>
             </Button>
           </div>
-
-          <div className="mt-16 grid grid-cols-3 gap-8 max-w-xl">
-            {[
-              { v: "100+", l: "Industrial Clients" },
-              { v: "500+", l: "Projects Done" },
-              { v: "24/7", l: "Support" },
-            ].map((s, i) => (
-              <motion.div
-                key={s.l}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.8 + i * 0.15 }}
-              >
-                <div className="font-display text-3xl sm:text-4xl font-bold text-gradient-teal">
-                  {s.v}
-                </div>
-                <div className="text-xs uppercase tracking-widest text-muted-foreground mt-1">
-                  {s.l}
-                </div>
-              </motion.div>
-            ))}
-          </div>
         </motion.div>
       </div>
 
-      {/* Scroll indicator */}
-      <motion.div
-        className="absolute bottom-8 left-1/2 -translate-x-1/2"
-        animate={{ y: [0, 10, 0] }}
-        transition={{ duration: 2, repeat: Infinity }}
-      >
-        <div className="w-6 h-10 rounded-full border-2 border-muted-foreground/40 flex items-start justify-center p-1.5">
-          <div className="w-1 h-2 rounded-full bg-primary" />
-        </div>
-      </motion.div>
     </section>
   );
 }

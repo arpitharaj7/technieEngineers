@@ -2,10 +2,9 @@ import { motion } from "framer-motion";
 import { Truck, Crosshair, Hammer, Users, Tag } from "lucide-react";
 
 const features = [
-  { icon: Truck, title: "Timely Delivery", desc: "Schedules we honour. Lead times we hit." },
-  { icon: Crosshair, title: "Precision Manufacturing", desc: "Tolerances measured in microns, not millimetres." },
-  { icon: Hammer, title: "Durable Materials", desc: "Industrial-grade alloys built to last decades." },
-  { icon: Users, title: "Skilled Workforce", desc: "Veteran fabricators and certified engineers." },
+  { icon: Crosshair, title: "Certified Manufacturing", desc: "Certified manufacturing processes following industry standards for bridge bearings and expansion joints." },
+  { icon: Hammer, title: "Railway Bridge Compliance", desc: "Designs and fabrication compliant with railway bridge specifications and regulatory requirements." },
+  { icon: Users, title: "In-house Testing", desc: "Comprehensive in-house testing and quality assurance to validate performance and safety." },
   { icon: Tag, title: "Affordable Pricing", desc: "Direct-to-buyer pricing without middlemen." },
 ];
 
@@ -21,11 +20,13 @@ export function WhyUs() {
         >
           <span className="text-xs uppercase tracking-[0.3em] text-primary">Why Choose Us</span>
           <h2 className="mt-4 text-4xl sm:text-5xl lg:text-6xl font-bold">
-            Five reasons clients <span className="text-gradient-teal">stay.</span>
+            <span className="text-gradient-teal">Trusted Infrastructure</span>
+            <br />
+            Solutions
           </h2>
         </motion.div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-5">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
           {features.map((f, i) => (
             <motion.div
               key={f.title}
@@ -46,6 +47,30 @@ export function WhyUs() {
               </div>
             </motion.div>
           ))}
+        </div>
+
+        <div className="mt-12 flex justify-center">
+          <div className="glass rounded-[2rem] border border-white/10 p-8 max-w-5xl w-full">
+            <div className="text-center mx-auto max-w-2xl">
+              <p className="text-xs uppercase tracking-[0.3em] text-primary">Featured Project References</p>
+              <h3 className="mt-4 text-3xl sm:text-4xl font-semibold text-foreground">Premium infrastructure credentials</h3>
+            </div>
+            <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4">
+              {[
+                "NH-66 Alleppey Kerala",
+                "NTPC Rehab Work",
+                "Jammu Bridge Work",
+                "Odisha Railway Work",
+              ].map((project) => (
+                <div
+                  key={project}
+                  className="rounded-full border border-primary/20 bg-white/10 px-4 py-3 text-center text-sm font-medium text-foreground shadow-[0_0_25px_rgba(56,189,248,0.12)] transition-all hover:border-primary/40 hover:shadow-[0_0_30px_rgba(56,189,248,0.18)]"
+                >
+                  {project}
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     </section>

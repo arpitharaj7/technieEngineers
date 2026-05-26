@@ -1,22 +1,25 @@
 import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
-import springs from "@/assets/product-springs.jpg";
-import valve from "@/assets/product-valve.jpg";
-import train from "@/assets/product-train.jpg";
-import fab from "@/assets/product-fabrication.jpg";
-import oil from "@/assets/machine-oil.jpg";
-import mustard from "@/assets/machine-mustard.jpg";
+import pot from "@/assets/pot.jpg";
+import elastomeric from "@/assets/elastomeric.jpg";
+import expansion from "@/assets/expansion.jpg";
+import spherical from "@/assets/spherical.jpg";
+import pinBearing from "@/assets/pinbearing.jpg";
+import rocker from "@/assets/rocker.jpg";
+import metallicGuide from "@/assets/product-valve.jpg";
+import rehabilitation from "@/assets/product-fabrication.jpg";
 
 const products = [
-  { img: springs, title: "Industrial Springs", desc: "Heavy-duty compression and torsion springs engineered for industrial loads." },
-  { img: springs, title: "Metro Spring", desc: "Precision metro & rail-grade springs built to vibration tolerances." },
-  { img: valve, title: "Control Valve", desc: "Reliable flow regulation across pneumatic and hydraulic systems." },
-  { img: train, title: "Train Parts", desc: "Forged and machined railway components engineered for safety." },
-  { img: fab, title: "Fabrication", desc: "Custom metal fabrication — cutting, welding, finishing." },
-  { img: fab, title: "Fabrication Services", desc: "End-to-end project fabrication, on-site or in workshop." },
-  { img: oil, title: "Oil Extraction Machine", desc: "Continuous-duty extraction systems for edible oils." },
-  { img: mustard, title: "Machine Manufacturing", desc: "Bespoke industrial machines manufactured to spec." },
+  { img: pot, title: "Pot Cum PTFE Bearings", desc: "High-load bridge bearing systems designed for rotational movement and structural stability." },
+  { img: elastomeric, title: "Elastomeric Bearings", desc: "Reinforced elastomeric bridge bearings engineered for durability and vibration absorption." },
+  { img: expansion, title: "Expansion Joints", desc: "Reliable bridge expansion joint systems ensuring smooth structural movement and long-term performance." },
+  { img: spherical, title: "Spherical Bearings", desc: "Multidirectional bearing solutions designed for thermal expansion and seismic movement." },
+  { img: pinBearing, title: "Pin Bearings", desc: "Precision-engineered rotational bridge bearing systems for infrastructure applications." },
+  { img: rocker, title: "Rocker Cum Roller Bearings", desc: "Heavy-duty steel roller bearing assemblies for controlled structural movement." },
+  { img: metallicGuide, title: "Metallic Guide Bearings", desc: "Sliding bearing assemblies engineered for horizontal force management and controlled movement." },
+  { img: rehabilitation, title: "Bridge Rehabilitation Works", desc: "Structural repair, bearing replacement, and rehabilitation solutions for bridge infrastructure projects." },
 ];
+
 
 export function Products() {
   return (
@@ -26,18 +29,54 @@ export function Products() {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-6 mb-16"
+          className="grid gap-10 mb-16 lg:grid-cols-[1.4fr_minmax(0,0.9fr)]"
         >
           <div>
-            <span className="text-xs uppercase tracking-[0.3em] text-primary">Products & Services</span>
+            <span className="text-xs uppercase tracking-[0.3em] text-primary">Product Range</span>
             <h2 className="mt-4 text-4xl sm:text-5xl lg:text-6xl font-bold">
-              Engineered for <span className="text-gradient-teal">industry.</span>
+              Engineered for <span className="text-gradient-teal">infrastructure.</span>
             </h2>
+            <p className="mt-6 max-w-xl text-muted-foreground">
+              Explore our range of bridge bearings, expansion joints, rehabilitation systems, and steel fabrication solutions engineered for railway and infrastructure projects.
+            </p>
+            <ul className="mt-8 grid gap-3 text-sm text-muted-foreground sm:grid-cols-2">
+              <li className="flex items-start gap-2">
+                <span className="mt-2 h-2 w-2 rounded-full bg-primary" />
+                Actual bearing systems
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="mt-2 h-2 w-2 rounded-full bg-primary" />
+                Expansion joints
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="mt-2 h-2 w-2 rounded-full bg-primary" />
+                Rehab services
+              </li>
+            </ul>
           </div>
-          <p className="max-w-md text-muted-foreground">
-            Explore our complete catalog of industrial-grade springs, valves, machinery and
-            custom fabrication services.
-          </p>
+
+          <div className="rounded-3xl border border-border bg-background/80 p-8">
+            <span className="text-xs uppercase tracking-[0.3em] text-primary">Engineering Services</span>
+            <h3 className="mt-4 text-3xl font-semibold text-foreground">Infrastructure delivery support</h3>
+            <ul className="mt-6 space-y-3 text-sm text-muted-foreground">
+              <li className="flex items-start gap-2">
+                <span className="mt-2 h-2 w-2 rounded-full bg-primary" />
+                Bridge rehabilitation
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="mt-2 h-2 w-2 rounded-full bg-primary" />
+                Installation
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="mt-2 h-2 w-2 rounded-full bg-primary" />
+                Consultancy
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="mt-2 h-2 w-2 rounded-full bg-primary" />
+                Steel fabrication
+              </li>
+            </ul>
+          </div>
         </motion.div>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">

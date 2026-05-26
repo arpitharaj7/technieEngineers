@@ -45,7 +45,7 @@ export function Quote() {
             className="glass-strong rounded-3xl p-6 sm:p-10 space-y-5"
           >
             <Field label="Product / Service">
-              <input required name="product" placeholder="e.g. Mustard Oil Filter Machine" className="field-input" />
+              <input required name="product" placeholder="e.g. Expansion Joint Requirement" className="field-input" />
             </Field>
             <Field label="Mobile Number">
               <input required name="phone" type="tel" placeholder="+91 XXXXX XXXXX" className="field-input" />
