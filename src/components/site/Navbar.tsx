@@ -19,6 +19,8 @@ export function Navbar() {
   const [light, setLight] = useState(false);
 
   useEffect(() => {
+    setLight(document.documentElement.classList.contains("light"));
+
     const onScroll = () => {
       setScrolled(window.scrollY > 30);
       const sections = links.map((l) => document.querySelector(l.href));
@@ -88,7 +90,7 @@ export function Navbar() {
           <button
             onClick={toggleTheme}
             aria-label="Toggle theme"
-            className="inline-flex w-10 h-10 items-center justify-center rounded-full glass hover:bg-white/10 transition"
+            className="inline-flex w-10 h-10 items-center justify-center rounded-full glass border border-border text-foreground shadow-sm hover:bg-white/10 transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/70"
           >
             {light ? <Moon className="w-4 h-4" /> : <Sun className="w-4 h-4" />}
           </button>

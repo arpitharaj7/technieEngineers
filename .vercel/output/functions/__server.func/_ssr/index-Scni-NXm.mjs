@@ -47,7 +47,7 @@ const buttonVariants = cva(
         link: "text-primary underline-offset-4 hover:underline",
         hero: "[background-image:var(--gradient-accent)] text-primary-foreground shadow-[0_0_40px_oklch(0.72_0.15_195/0.4)] hover:scale-105 hover:shadow-[0_0_60px_oklch(0.72_0.15_195/0.6)] transition-all duration-300 font-semibold",
         fire: "[background-image:var(--gradient-fire)] text-accent-foreground shadow-[0_0_40px_oklch(0.72_0.18_55/0.4)] hover:scale-105 hover:shadow-[0_0_60px_oklch(0.72_0.18_55/0.6)] transition-all duration-300 font-semibold",
-        glass: "glass text-foreground hover:bg-white/10 transition-all duration-300"
+        glass: "glass text-foreground hover:bg-muted/80 transition-all duration-300"
       },
       size: {
         default: "h-9 px-4 py-2",
@@ -84,6 +84,7 @@ function Navbar() {
   const [active, setActive] = reactExports.useState("#home");
   const [light, setLight] = reactExports.useState(false);
   reactExports.useEffect(() => {
+    setLight(document.documentElement.classList.contains("light"));
     const onScroll = () => {
       setScrolled(window.scrollY > 30);
       const sections = links.map((l) => document.querySelector(l.href));
@@ -149,7 +150,7 @@ function Navbar() {
               {
                 onClick: toggleTheme,
                 "aria-label": "Toggle theme",
-                className: "hidden sm:inline-flex w-10 h-10 items-center justify-center rounded-full glass hover:bg-white/10 transition",
+                className: "inline-flex w-10 h-10 items-center justify-center rounded-full glass border border-border text-foreground shadow-sm hover:bg-white/10 transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/70",
                 children: light ? /* @__PURE__ */ jsxRuntimeExports.jsx(Moon, { className: "w-4 h-4" }) : /* @__PURE__ */ jsxRuntimeExports.jsx(Sun, { className: "w-4 h-4" })
               }
             ),
@@ -240,8 +241,8 @@ function Hero() {
             /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-xs uppercase tracking-[0.25em] text-muted-foreground", children: "we make the heart of bridges" })
           ] }),
           /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex flex-wrap gap-3 mb-8", children: [
-            /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "rounded-full border border-border bg-background/80 px-4 py-2 text-xs sm:text-sm font-medium text-foreground shadow-sm", children: "RDSO Approved Firm" }),
-            /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "rounded-full border border-border bg-background/80 px-4 py-2 text-xs sm:text-sm font-medium text-foreground shadow-sm", children: "ISO 9001:2015 Certified" })
+            /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "rounded-full border border-border bg-background/95 px-4 py-2 text-xs sm:text-sm font-medium text-foreground shadow-sm", children: "RDSO Approved Firm" }),
+            /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "rounded-full border border-border bg-background/95 px-4 py-2 text-xs sm:text-sm font-medium text-foreground shadow-sm", children: "ISO 9001:2015 Certified" })
           ] }),
           /* @__PURE__ */ jsxRuntimeExports.jsxs("h1", { className: "font-display text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-bold leading-[1.05] tracking-tight", children: [
             /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-gradient-teal", children: "Engineering" }),
@@ -599,7 +600,8 @@ const credentials = [
 ];
 function Testimonials() {
   return /* @__PURE__ */ jsxRuntimeExports.jsxs("section", { className: "relative py-24 sm:py-32 overflow-hidden", children: [
-    /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute inset-0 [background-image:var(--gradient-hero)] animate-gradient opacity-50" }),
+    /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute inset-0 bg-background/95" }),
+    /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-accent/10" }),
     /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "container mx-auto px-6 relative", children: [
       /* @__PURE__ */ jsxRuntimeExports.jsxs(
         motion.div,
