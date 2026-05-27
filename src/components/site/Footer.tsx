@@ -45,7 +45,7 @@ export function Footer() {
         </div>
 
         <div className="pt-6 border-t border-border flex flex-col sm:flex-row justify-between items-center gap-3 text-xs text-muted-foreground">
-          <p>© 2025 Technie Engineers. All rights reserved.</p>
+          <p>© 2026 Technie Engineers. All rights reserved.</p>
           <p>Crafted with precision in Meerut, India.</p>
         </div>
       </div>
