@@ -341,21 +341,23 @@ function About() {
     ] })
   ] });
 }
-const mustard = "/assets/machine-mustard-ZrY_NY2K.jpg";
-const vito = "/assets/machine-vito-Dw7lfMCp.jpg";
-const oil = "/assets/machine-oil-BkHzHqw1.jpg";
-const edible = "/assets/machine-edible-BwL_16Fk.jpg";
+const pot = "/assets/pot-B-GWscNx.jpg";
+const elastomeric = "/assets/elastomeric-DaWiXm_1.jpg";
+const expansion = "/assets/expansion-CRTVN14a.jpg";
+const spherical = "/assets/spherical-DTrnQAQm.jpg";
+const pinBearing = "/assets/pinbearing-zH6IS9gc.jpg";
+const rocker = "/assets/rocker--uoDh1B1.jpg";
 const machines = [
-  { img: mustard, title: "Pot Cum PTFE Bearing", specs: ["High load capacity", "Rotational movement support", "Structural stability"] },
-  { img: vito, title: "Elastomeric Bearing", specs: ["Vibration absorption", "Durable elastomer layers", "Bridge load distribution"] },
-  { img: oil, title: "Expansion Joint", specs: ["Smooth structural movement", "Weather-resistant sealing", "Long service life"] },
-  { img: edible, title: "Spherical Bearing", specs: ["Multidirectional rotation", "Thermal movement support", "Seismic compatibility"] },
-  { img: mustard, title: "Pin Bearing", specs: ["Rotational flexibility", "Horizontal load transfer", "Precision-engineered steel"] },
-  { img: vito, title: "Rocker Cum Roller Bearing", specs: ["Controlled bridge movement", "Heavy-duty roller system", "High load endurance"] }
+  { img: pot, title: "Pot Cum PTFE Bearing", specs: ["High load capacity", "Rotational movement support", "Structural stability"] },
+  { img: elastomeric, title: "Elastomeric Bearing", specs: ["Vibration absorption", "Durable elastomer layers", "Bridge load distribution"] },
+  { img: expansion, title: "Expansion Joint", specs: ["Smooth structural movement", "Weather-resistant sealing", "Long service life"] },
+  { img: spherical, title: "Spherical Bearing", specs: ["Multidirectional rotation", "Thermal movement support", "Seismic compatibility"] },
+  { img: pinBearing, title: "Pin Bearing", specs: ["Rotational flexibility", "Horizontal load transfer", "Precision-engineered steel"] },
+  { img: rocker, title: "Rocker Cum Roller Bearing", specs: ["Controlled bridge movement", "Heavy-duty roller system", "High load endurance"] }
 ];
 function Machinery() {
   return /* @__PURE__ */ jsxRuntimeExports.jsxs("section", { id: "machinery", className: "relative py-24 sm:py-32 overflow-hidden", children: [
-    /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute top-0 right-0 w-[600px] h-[600px] bg-accent/10 rounded-full blur-3xl" }),
+    /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute top-0 right-0 w-150 h-150 bg-accent/10 rounded-full blur-3xl" }),
     /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "container mx-auto px-6 relative", children: [
       /* @__PURE__ */ jsxRuntimeExports.jsxs(
         motion.div,
@@ -373,7 +375,7 @@ function Machinery() {
           ]
         }
       ),
-      /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "grid md:grid-cols-3 gap-6", children: machines.map((m, i) => /* @__PURE__ */ jsxRuntimeExports.jsx(
+      /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "grid md:grid-cols-3 gap-6", children: machines.map((m, i) => /* @__PURE__ */ jsxRuntimeExports.jsxs(
         motion.div,
         {
           initial: { opacity: 0, y: 40 },
@@ -381,8 +383,8 @@ function Machinery() {
           viewport: { once: true },
           transition: { delay: i * 0.1 },
           className: "group relative rounded-3xl glass overflow-hidden hover:shadow-[0_0_60px_oklch(0.72_0.18_55/0.25)] transition-all duration-500",
-          children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex flex-col", children: [
-            /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "aspect-video overflow-hidden bg-muted", children: /* @__PURE__ */ jsxRuntimeExports.jsx(
+          children: [
+            m.img && /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "aspect-video overflow-hidden bg-muted", children: /* @__PURE__ */ jsxRuntimeExports.jsx(
               "img",
               {
                 src: m.img,
@@ -391,7 +393,7 @@ function Machinery() {
                 className: "w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
               }
             ) }),
-            /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "p-6 flex flex-col", children: [
+            /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "p-6 flex flex-col h-full", children: [
               /* @__PURE__ */ jsxRuntimeExports.jsx("h3", { className: "font-display text-lg font-semibold", children: m.title }),
               /* @__PURE__ */ jsxRuntimeExports.jsx("ul", { className: "mt-4 space-y-2 flex-1", children: m.specs.map((s) => /* @__PURE__ */ jsxRuntimeExports.jsxs("li", { className: "flex items-center gap-2 text-sm text-muted-foreground", children: [
                 /* @__PURE__ */ jsxRuntimeExports.jsx(Check, { className: "w-4 h-4 text-primary shrink-0" }),
@@ -403,7 +405,7 @@ function Machinery() {
                 " Send Inquiry"
               ] }) })
             ] })
-          ] })
+          ]
         },
         m.title
       )) })

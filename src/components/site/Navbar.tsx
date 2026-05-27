@@ -88,7 +88,7 @@ export function Navbar() {
           <button
             onClick={toggleTheme}
             aria-label="Toggle theme"
-            className="hidden sm:inline-flex w-10 h-10 items-center justify-center rounded-full glass hover:bg-white/10 transition"
+            className="inline-flex w-10 h-10 items-center justify-center rounded-full glass hover:bg-white/10 transition"
           >
             {light ? <Moon className="w-4 h-4" /> : <Sun className="w-4 h-4" />}
           </button>

@@ -12,7 +12,8 @@ const credentials = [
 export function Testimonials() {
   return (
     <section className="relative py-24 sm:py-32 overflow-hidden">
-      <div className="absolute inset-0 [background-image:var(--gradient-hero)] animate-gradient opacity-50" />
+      <div className="absolute inset-0 bg-background/95" />
+      <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-accent/10" />
       <div className="container mx-auto px-6 relative">
         <motion.div
           initial={{ opacity: 0, y: 30 }}

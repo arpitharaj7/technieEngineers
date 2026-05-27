@@ -1,24 +1,26 @@
 import { motion } from "framer-motion";
 import { Send, Check } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import mustard from "@/assets/machine-mustard.jpg";
-import vito from "@/assets/machine-vito.jpg";
-import oil from "@/assets/machine-oil.jpg";
-import edible from "@/assets/machine-edible.jpg";
+import pot from "@/assets/pot.jpg";
+import elastomeric from "@/assets/elastomeric.jpg";
+import expansion from "@/assets/expansion.jpg";
+import spherical from "@/assets/spherical.jpg";
+import pinBearing from "@/assets/pinbearing.jpg";
+import rocker from "@/assets/rocker.jpg";
 
 const machines = [
-  { img: mustard, title: "Pot Cum PTFE Bearing", specs: ["High load capacity", "Rotational movement support", "Structural stability"] },
-  { img: vito, title: "Elastomeric Bearing", specs: ["Vibration absorption", "Durable elastomer layers", "Bridge load distribution"] },
-  { img: oil, title: "Expansion Joint", specs: ["Smooth structural movement", "Weather-resistant sealing", "Long service life"] },
-  { img: edible, title: "Spherical Bearing", specs: ["Multidirectional rotation", "Thermal movement support", "Seismic compatibility"] },
-  { img: mustard, title: "Pin Bearing", specs: ["Rotational flexibility", "Horizontal load transfer", "Precision-engineered steel"] },
-  { img: vito, title: "Rocker Cum Roller Bearing", specs: ["Controlled bridge movement", "Heavy-duty roller system", "High load endurance"] },
+  { img: pot, title: "Pot Cum PTFE Bearing", specs: ["High load capacity", "Rotational movement support", "Structural stability"] },
+  { img: elastomeric, title: "Elastomeric Bearing", specs: ["Vibration absorption", "Durable elastomer layers", "Bridge load distribution"] },
+  { img: expansion, title: "Expansion Joint", specs: ["Smooth structural movement", "Weather-resistant sealing", "Long service life"] },
+  { img: spherical, title: "Spherical Bearing", specs: ["Multidirectional rotation", "Thermal movement support", "Seismic compatibility"] },
+  { img: pinBearing, title: "Pin Bearing", specs: ["Rotational flexibility", "Horizontal load transfer", "Precision-engineered steel"] },
+  { img: rocker, title: "Rocker Cum Roller Bearing", specs: ["Controlled bridge movement", "Heavy-duty roller system", "High load endurance"] },
 ];
 
 export function Machinery() {
   return (
     <section id="machinery" className="relative py-24 sm:py-32 overflow-hidden">
-      <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-accent/10 rounded-full blur-3xl" />
+      <div className="absolute top-0 right-0 w-150 h-150 bg-accent/10 rounded-full blur-3xl" />
       <div className="container mx-auto px-6 relative">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -42,7 +44,7 @@ export function Machinery() {
               transition={{ delay: i * 0.1 }}
               className="group relative rounded-3xl glass overflow-hidden hover:shadow-[0_0_60px_oklch(0.72_0.18_55/0.25)] transition-all duration-500"
             >
-              <div className="flex flex-col">
+              {m.img && (
                 <div className="aspect-video overflow-hidden bg-muted">
                   <img
                     src={m.img}
@@ -51,21 +53,21 @@ export function Machinery() {
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                   />
                 </div>
-                <div className="p-6 flex flex-col">
-                  <h3 className="font-display text-lg font-semibold">{m.title}</h3>
-                  <ul className="mt-4 space-y-2 flex-1">
-                    {m.specs.map((s) => (
-                      <li key={s} className="flex items-center gap-2 text-sm text-muted-foreground">
-                        <Check className="w-4 h-4 text-primary shrink-0" /> {s}
-                      </li>
-                    ))}
-                  </ul>
-                  <Button variant="hero" className="mt-6 self-start" asChild>
-                    <a href="#quote">
-                      <Send className="w-4 h-4" /> Send Inquiry
-                    </a>
-                  </Button>
-                </div>
+              )}
+              <div className="p-6 flex flex-col h-full">
+                <h3 className="font-display text-lg font-semibold">{m.title}</h3>
+                <ul className="mt-4 space-y-2 flex-1">
+                  {m.specs.map((s) => (
+                    <li key={s} className="flex items-center gap-2 text-sm text-muted-foreground">
+                      <Check className="w-4 h-4 text-primary shrink-0" /> {s}
+                    </li>
+                  ))}
+                </ul>
+                <Button variant="hero" className="mt-6 self-start" asChild>
+                  <a href="#quote">
+                    <Send className="w-4 h-4" /> Send Inquiry
+                  </a>
+                </Button>
               </div>
             </motion.div>
           ))}

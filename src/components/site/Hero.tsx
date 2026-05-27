@@ -51,10 +51,10 @@ export function Hero() {
           </div>
 
           <div className="flex flex-wrap gap-3 mb-8">
-            <div className="rounded-full border border-border bg-background/80 px-4 py-2 text-xs sm:text-sm font-medium text-foreground shadow-sm">
+            <div className="rounded-full border border-border bg-background/95 px-4 py-2 text-xs sm:text-sm font-medium text-foreground shadow-sm">
               RDSO Approved Firm
             </div>
-            <div className="rounded-full border border-border bg-background/80 px-4 py-2 text-xs sm:text-sm font-medium text-foreground shadow-sm">
+            <div className="rounded-full border border-border bg-background/95 px-4 py-2 text-xs sm:text-sm font-medium text-foreground shadow-sm">
               ISO 9001:2015 Certified
             </div>
           </div>

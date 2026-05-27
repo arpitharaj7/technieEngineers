@@ -2,22 +2,14 @@ import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 import pot from "@/assets/pot.jpg";
 import elastomeric from "@/assets/elastomeric.jpg";
-import expansion from "@/assets/expansion.jpg";
-import spherical from "@/assets/spherical.jpg";
-import pinBearing from "@/assets/pinbearing.jpg";
-import rocker from "@/assets/rocker.jpg";
-import metallicGuide from "@/assets/product-valve.jpg";
-import rehabilitation from "@/assets/product-fabrication.jpg";
 
 const products = [
   { img: pot, title: "Pot Cum PTFE Bearings", desc: "High-load bridge bearing systems designed for rotational movement and structural stability." },
   { img: elastomeric, title: "Elastomeric Bearings", desc: "Reinforced elastomeric bridge bearings engineered for durability and vibration absorption." },
-  { img: expansion, title: "Expansion Joints", desc: "Reliable bridge expansion joint systems ensuring smooth structural movement and long-term performance." },
-  { img: spherical, title: "Spherical Bearings", desc: "Multidirectional bearing solutions designed for thermal expansion and seismic movement." },
-  { img: pinBearing, title: "Pin Bearings", desc: "Precision-engineered rotational bridge bearing systems for infrastructure applications." },
-  { img: rocker, title: "Rocker Cum Roller Bearings", desc: "Heavy-duty steel roller bearing assemblies for controlled structural movement." },
-  { img: metallicGuide, title: "Metallic Guide Bearings", desc: "Sliding bearing assemblies engineered for horizontal force management and controlled movement." },
-  { img: rehabilitation, title: "Bridge Rehabilitation Works", desc: "Structural repair, bearing replacement, and rehabilitation solutions for bridge infrastructure projects." },
+  { title: "Expansion Joints", desc: "Reliable bridge expansion joint systems ensuring smooth structural movement and long-term performance." },
+  { title: "Spherical Bearings", desc: "Multidirectional bearing solutions designed for thermal expansion and seismic movement." },
+  { title: "Pin Bearings", desc: "Precision-engineered rotational bridge bearing systems for infrastructure applications." },
+  { title: "Rocker Cum Roller Bearings", desc: "Heavy-duty steel roller bearing assemblies for controlled structural movement." },
 ];
 
 
@@ -89,26 +81,37 @@ export function Products() {
               transition={{ delay: (i % 4) * 0.08 }}
               className="group relative rounded-2xl overflow-hidden glass hover-lift cursor-pointer"
             >
-              <div className="aspect-[4/3] overflow-hidden bg-muted">
-                <img
-                  src={p.img}
-                  alt={p.title}
-                  loading="lazy"
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-background via-background/30 to-transparent opacity-80" />
-              </div>
+              {p.img && (
+                <div className="aspect-4/3 overflow-hidden bg-muted">
+                  <img
+                    src={p.img}
+                    alt={p.title}
+                    loading="lazy"
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                  />
+                  <div className="absolute inset-0 bg-linear-to-t from-background via-background/30 to-transparent opacity-80" />
+                </div>
+              )}
               <div className="p-5">
                 <h3 className="font-display font-semibold text-lg group-hover:text-primary transition-colors">
                   {p.title}
                 </h3>
                 <p className="mt-2 text-sm text-muted-foreground line-clamp-2">{p.desc}</p>
-                <a
-                  href="#quote"
-                  className="mt-4 inline-flex items-center gap-1 text-sm text-primary font-medium group-hover:gap-2 transition-all"
-                >
-                  View Details <ArrowUpRight className="w-4 h-4" />
-                </a>
+                {i === 0 ? (
+                  <a
+                    href="#quote"
+                    className="mt-4 inline-flex items-center gap-2 rounded-full bg-primary px-4 py-2 text-sm font-medium text-white transition hover:bg-primary/90"
+                  >
+                    Send Inquiry <ArrowUpRight className="w-4 h-4" />
+                  </a>
+                ) : (
+                  <a
+                    href="#quote"
+                    className="mt-4 inline-flex items-center gap-1 text-sm text-primary font-medium group-hover:gap-2 transition-all"
+                  >
+                    View Details <ArrowUpRight className="w-4 h-4" />
+                  </a>
+                )}
               </div>
               <div className="absolute inset-0 ring-1 ring-inset ring-transparent group-hover:ring-primary/40 rounded-2xl transition" />
             </motion.article>
