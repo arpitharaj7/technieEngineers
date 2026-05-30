@@ -1,4 +1,5 @@
-import { Cog, Facebook, Linkedin, Twitter } from "lucide-react";
+import { Linkedin } from "lucide-react";
+import logo from "../../assets/logo.jpg";
 
 export function Footer() {
   return (
@@ -7,7 +8,7 @@ export function Footer() {
         <div className="grid md:grid-cols-4 gap-10 mb-12">
           <div className="md:col-span-2">
             <div className="flex items-center gap-2 mb-4">
-              <Cog className="w-7 h-7 text-primary" />
+              <img src={logo} alt="Technie Engineers" className="w-7 h-7 object-contain" />
               <div className="leading-none">
                 <div className="font-display font-bold text-lg">Technie Engineers</div>
                 <div className="text-[10px] uppercase tracking-[0.3em] text-primary mt-1">Bridge Engineering • Infrastructure Solutions</div>

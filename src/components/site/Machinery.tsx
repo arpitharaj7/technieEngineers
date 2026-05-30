@@ -42,7 +42,7 @@ export function Machinery() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
-              className="group relative rounded-3xl glass overflow-hidden hover:shadow-[0_0_60px_oklch(0.72_0.18_55/0.25)] transition-all duration-500"
+              className="group relative rounded-3xl glass overflow-hidden hover:shadow-[0_0_60px_rgba(255,212,0,0.25)] transition-all duration-500"
             >
               {m.img && (
                 <div className="aspect-video overflow-hidden bg-muted">

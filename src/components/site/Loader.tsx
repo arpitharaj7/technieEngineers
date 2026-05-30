@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Cog } from "lucide-react";
+import logo from "../../assets/logo.jpg";
 
 export function Loader() {
   const [show, setShow] = useState(true);
@@ -20,7 +20,7 @@ export function Loader() {
             animate={{ rotate: 360 }}
             transition={{ duration: 1.5, repeat: Infinity, ease: "linear" }}
           >
-            <Cog className="w-16 h-16 text-primary" />
+            <img src={logo} alt="Technie Engineers" className="w-16 h-16 object-contain" />
           </motion.div>
           <div className="mt-4 text-xs uppercase tracking-[0.4em] text-muted-foreground">
             Technie Engineers

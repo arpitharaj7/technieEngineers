@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { ArrowRight, Sparkles, Cog, Wrench } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import heroImg from "@/assets/hero-industrial.jpg";
+import heroImg from "@/assets/bg.jpg";
 
 export function Hero() {
   return (

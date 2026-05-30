@@ -35,15 +35,14 @@ export function WhyUs() {
               viewport={{ once: true }}
               transition={{ delay: i * 0.08 }}
               whileHover={{ y: -8 }}
-              className="relative glass rounded-2xl p-6 group overflow-hidden"
+              className="relative rounded-3xl border border-slate-200/70 bg-white shadow-sm p-6 group overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-xl"
             >
-              <div className="absolute inset-0 [background-image:var(--gradient-accent)] opacity-0 group-hover:opacity-10 transition-opacity" />
               <div className="relative">
-                <div className="w-12 h-12 rounded-xl [background-image:var(--gradient-accent)] flex items-center justify-center mb-4 group-hover:rotate-6 transition-transform">
-                  <f.icon className="w-6 h-6 text-primary-foreground" />
+                <div className="w-12 h-12 rounded-2xl bg-primary/10 text-primary flex items-center justify-center mb-4 transition-transform duration-300 group-hover:scale-105">
+                  <f.icon className="w-6 h-6" />
                 </div>
-                <h3 className="font-display font-semibold text-lg">{f.title}</h3>
-                <p className="mt-2 text-sm text-muted-foreground">{f.desc}</p>
+                <h3 className="font-display font-semibold text-lg text-slate-950">{f.title}</h3>
+                <p className="mt-2 text-sm text-slate-500">{f.desc}</p>
               </div>
             </motion.div>
           ))}

@@ -30,7 +30,7 @@ export function Quote() {
           >
             <span className="text-xs uppercase tracking-[0.3em] text-accent">Get in Touch</span>
             <h2 className="mt-4 text-4xl sm:text-5xl lg:text-6xl font-bold">
-              Request a <span className="text-gradient-teal">quote.</span>
+              Request a <span className="text-gradient-primary">quote.</span>
             </h2>
             <p className="mt-4 text-muted-foreground">
               Tell us what you need. We'll get back within 24 hours.
@@ -42,7 +42,7 @@ export function Quote() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             onSubmit={submit}
-            className="glass-strong rounded-3xl p-6 sm:p-10 space-y-5"
+            className="bg-white border border-slate-200 rounded-3xl p-6 sm:p-10 space-y-5 shadow-xl shadow-slate-900/5"
           >
             <Field label="Product / Service">
               <input required name="product" placeholder="e.g. Expansion Joint Requirement" className="field-input" />
@@ -67,7 +67,7 @@ export function Quote() {
       <style>{`
         .field-input {
           width: 100%;
-          background: oklch(1 0 0 / 0.04);
+          background: var(--input);
           border: 1px solid var(--border);
           border-radius: 12px;
           padding: 14px 16px;
@@ -78,8 +78,8 @@ export function Quote() {
         }
         .field-input:focus {
           border-color: var(--primary);
-          background: oklch(1 0 0 / 0.06);
-          box-shadow: 0 0 0 4px oklch(0.72 0.15 195 / 0.15);
+          background: rgba(255,255,255,0.06);
+          box-shadow: 0 0 0 4px rgba(11,92,255,0.15);
         }
         .field-input::placeholder { color: var(--muted-foreground); opacity: 0.6; }
       `}</style>

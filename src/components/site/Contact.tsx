@@ -21,33 +21,62 @@ export function Contact() {
         <div className="grid lg:grid-cols-2 gap-8">
           <div className="space-y-4">
             {[
-              { icon: User, label: "Contact Team", value: "Engineering Team" },
+              {
+                icon: User,
+                label: "Technical Team",
+                value: "Click here",
+                href: "https://drive.google.com/file/d/1cx2pPNyzblpDA6JjNCCa7QiIr6KrRsU6/view?usp=sharing",
+              },
               { icon: MapPin, label: "Office Address", value: "G-123, Dwarka Dham, Shivaya Modipuram, Meerut (U.P)" },
               { icon: MapPin, label: "Works Unit", value: "Plot No. G-56, Phase-1, UPSIDC Industrial Area, Ghaziabad (U.P)" },
               { icon: Phone, label: "Phone", value: "+91 9058871092, +91 7017985564", href: "tel:+919058871092" },
               { icon: Mail, label: "Email", value: "technieengineers@gmail.com", href: "mailto:technieengineers@gmail.com" },
-            ].map((c, i) => (
-              <motion.a
-                key={c.label}
-                href={c.href || "#"}
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.08 }}
-                className="flex items-center gap-4 glass rounded-2xl p-5 hover-lift group"
-              >
-                <div className="w-12 h-12 rounded-xl [background-image:var(--gradient-accent)] flex items-center justify-center shrink-0">
-                  <c.icon className="w-5 h-5 text-primary-foreground" />
-                </div>
-                <div>
-                  <div className="text-xs uppercase tracking-widest text-muted-foreground">{c.label}</div>
-                  <div className="font-display font-semibold text-lg group-hover:text-primary transition-colors">{c.value}</div>
-                </div>
-              </motion.a>
-            ))}
+            ].map((c, i) => {
+              const isAnchor = Boolean(c.href);
+              const cursorClass = isAnchor ? "cursor-pointer" : "cursor-default";
+
+              const cardContent = (
+                <>
+                  <div className="w-12 h-12 rounded-xl [background-image:var(--gradient-accent)] flex items-center justify-center shrink-0">
+                    <c.icon className="w-5 h-5 text-primary-foreground" />
+                  </div>
+                  <div>
+                    <div className="text-xs uppercase tracking-widest text-muted-foreground">{c.label}</div>
+                    <div className="font-display font-semibold text-lg group-hover:text-primary transition-colors">{c.value}</div>
+                  </div>
+                </>
+              );
+
+              return isAnchor ? (
+                <motion.a
+                  key={c.label}
+                  href={c.href}
+                  target={c.href?.startsWith("http") ? "_blank" : undefined}
+                  rel={c.href?.startsWith("http") ? "noreferrer" : undefined}
+                  initial={{ opacity: 0, x: -20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: i * 0.08 }}
+                  className={`flex items-center gap-4 glass rounded-2xl p-5 hover-lift group ${cursorClass}`}
+                >
+                  {cardContent}
+                </motion.a>
+              ) : (
+                <motion.div
+                  key={c.label}
+                  initial={{ opacity: 0, x: -20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: i * 0.08 }}
+                  className={`flex items-center gap-4 glass rounded-2xl p-5 hover-lift group ${cursorClass}`}
+                >
+                  {cardContent}
+                </motion.div>
+              );
+            })}
             <div className="flex gap-3 pt-2">
               <Button variant="hero" className="flex-1" asChild>
-                <a href="tel:+919058871092"><Phone className="w-4 h-4" /> Call Now</a>
+                <a href="tel:+917417271092"><Phone className="w-4 h-4" /> Call Now</a>
               </Button>
               <Button variant="glass" className="flex-1" asChild>
                 <a href="mailto:technieengineers@gmail.com"><Mail className="w-4 h-4" /> Email</a>
@@ -63,7 +92,7 @@ export function Contact() {
           >
             <iframe
               title="Technie Engineers location"
-              src="https://www.google.com/maps?q=G-123%2C+Dwarka+Dham%2C+Shivaya+Modipuram%2C+Meerut%2C+Uttar+Pradesh%2C+India&output=embed"
+              src="https://www.google.com/maps?q=28.6584167,77.5736111&z=19&output=embed"
               className="w-full h-full border-0 grayscale-[0.4] contrast-110"
               loading="lazy"
             />
