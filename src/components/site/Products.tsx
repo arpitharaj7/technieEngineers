@@ -68,6 +68,15 @@ export function Products() {
                 Steel fabrication
               </li>
             </ul>
+            <div className="mt-6 flex items-start gap-4">
+              <div className="w-24 h-20 rounded-lg overflow-hidden bg-muted flex-shrink-0">
+                <img src={elastomeric} alt="F-Type Elastomeric Bearings" className="w-full h-full object-cover" />
+              </div>
+              <div>
+                <h4 className="font-semibold">F-Type Elastomeric Bearings</h4>
+                <p className="mt-1 text-sm text-muted-foreground">Factory-manufactured F-Type elastomeric bearings for moderate-to-high loads — provide vertical load support, horizontal flexibility, and excellent damping to reduce vibration and extend structure life.</p>
+              </div>
+            </div>
           </div>
         </motion.div>
 

@@ -444,13 +444,20 @@ const expansion = "/assets/expansion-CRTVN14a.jpg";
 const spherical = "/assets/spherical-DTrnQAQm.jpg";
 const pinBearing = "/assets/pinbearing-zH6IS9gc.jpg";
 const rocker = "/assets/rocker--uoDh1B1.jpg";
+const fTypeElastomeric = "/assets/F-TYPE%20ELASTOMERIC%20BEARINGS-Dx4Afvkp.jpeg";
 const machines = [
   { img: pot, title: "Pot Cum PTFE Bearing", specs: ["High load capacity", "Rotational movement support", "Structural stability"] },
   { img: elastomeric, title: "Elastomeric Bearing", specs: ["Vibration absorption", "Durable elastomer layers", "Bridge load distribution"] },
   { img: expansion, title: "Expansion Joint", specs: ["Smooth structural movement", "Weather-resistant sealing", "Long service life"] },
   { img: spherical, title: "Spherical Bearing", specs: ["Multidirectional rotation", "Thermal movement support", "Seismic compatibility"] },
   { img: pinBearing, title: "Pin Bearing", specs: ["Rotational flexibility", "Horizontal load transfer", "Precision-engineered steel"] },
-  { img: rocker, title: "Rocker Cum Roller Bearing", specs: ["Controlled bridge movement", "Heavy-duty roller system", "High load endurance"] }
+  { img: rocker, title: "Rocker Cum Roller Bearing", specs: ["Controlled bridge movement", "Heavy-duty roller system", "High load endurance"] },
+  {
+    img: fTypeElastomeric,
+    title: "F-Type Elastomeric Bearings",
+    description: "Factory-manufactured bearings that support vertical loads, allow horizontal flexibility, and help dampen bridge vibration.",
+    specs: ["Vertical load support", "Horizontal flexibility", "Vibration damping"]
+  }
 ];
 function Machinery() {
   return /* @__PURE__ */ jsxRuntimeExports.jsxs("section", { id: "machinery", className: "relative py-24 sm:py-32 overflow-hidden", children: [
@@ -492,6 +499,7 @@ function Machinery() {
             ) }),
             /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "p-6 flex flex-col h-full", children: [
               /* @__PURE__ */ jsxRuntimeExports.jsx("h3", { className: "font-display text-lg font-semibold", children: m.title }),
+              m.description && /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-2 text-sm text-muted-foreground", children: m.description }),
               /* @__PURE__ */ jsxRuntimeExports.jsx("ul", { className: "mt-4 space-y-2 flex-1", children: m.specs.map((s) => /* @__PURE__ */ jsxRuntimeExports.jsxs("li", { className: "flex items-center gap-2 text-sm text-muted-foreground", children: [
                 /* @__PURE__ */ jsxRuntimeExports.jsx(Check, { className: "w-4 h-4 text-primary shrink-0" }),
                 " ",

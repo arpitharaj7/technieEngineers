@@ -7,6 +7,7 @@ import expansion from "@/assets/expansion.jpg";
 import spherical from "@/assets/spherical.jpg";
 import pinBearing from "@/assets/pinbearing.jpg";
 import rocker from "@/assets/rocker.jpg";
+import fTypeElastomeric from "@/assets/F-TYPE ELASTOMERIC BEARINGS.jpeg";
 
 const machines = [
   { img: pot, title: "Pot Cum PTFE Bearing", specs: ["High load capacity", "Rotational movement support", "Structural stability"] },
@@ -15,6 +16,12 @@ const machines = [
   { img: spherical, title: "Spherical Bearing", specs: ["Multidirectional rotation", "Thermal movement support", "Seismic compatibility"] },
   { img: pinBearing, title: "Pin Bearing", specs: ["Rotational flexibility", "Horizontal load transfer", "Precision-engineered steel"] },
   { img: rocker, title: "Rocker Cum Roller Bearing", specs: ["Controlled bridge movement", "Heavy-duty roller system", "High load endurance"] },
+  {
+    img: fTypeElastomeric,
+    title: "F-Type Elastomeric Bearings",
+    description: "Factory-manufactured bearings that support vertical loads, allow horizontal flexibility, and help dampen bridge vibration.",
+    specs: ["Vertical load support", "Horizontal flexibility", "Vibration damping"],
+  },
 ];
 
 export function Machinery() {
@@ -56,6 +63,7 @@ export function Machinery() {
               )}
               <div className="p-6 flex flex-col h-full">
                 <h3 className="font-display text-lg font-semibold">{m.title}</h3>
+                {m.description && <p className="mt-2 text-sm text-muted-foreground">{m.description}</p>}
                 <ul className="mt-4 space-y-2 flex-1">
                   {m.specs.map((s) => (
                     <li key={s} className="flex items-center gap-2 text-sm text-muted-foreground">
