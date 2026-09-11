@@ -11,7 +11,7 @@ export default defineConfig({
     tsConfigPaths(),
     tailwindcss(),
     tanstackStart(),
-    nitro({ preset: 'vercel' }),
+    nitro({ preset: 'cloudflare_module' }),
     viteReact(),
   ],
 })
