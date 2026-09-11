@@ -75,7 +75,7 @@ export function Products() {
               </div>
               <div>
                 <h4 className="font-semibold">F-Type Elastomeric Bearings</h4>
-                <p className="mt-1 text-sm text-muted-foreground">Factory-manufactured F-Type elastomeric bearings for moderate-to-high loads — provide vertical load support, horizontal flexibility, and excellent damping to reduce vibration and extend structure life.</p>
+                <p className="mt-1 text-sm text-muted-foreground">Factory-manufactured F-Type elastomeric bearings for demanding bridge applications, providing vertical load support, horizontal flexibility, and vibration damping.</p>
               </div>
             </div>
           </div>
