@@ -2,7 +2,8 @@ import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 import pot from "@/assets/pot.jpg";
 import elastomeric from "@/assets/elastomeric.jpg";
-import fTypeBearingImage from "@/assets/F-TYPE ELASTOMERIC BEARINGS.jpeg";
+
+const fTypeBearingImage = "/f-type-elastomeric-bearings.jpeg";
 
 const products = [
   { img: pot, title: "Pot Cum PTFE Bearings", desc: "High-load bridge bearing systems designed for rotational movement and structural stability." },
@@ -71,7 +72,7 @@ export function Products() {
             </ul>
             <div className="mt-6 flex items-start gap-4">
               <div className="w-24 h-20 rounded-lg overflow-hidden bg-muted flex-shrink-0">
-                <img src={fTypeBearingImage} alt="F-Type Elastomeric Bearings" loading="eager" className="w-full h-full object-cover" />
+                <img src={fTypeBearingImage} alt="F-Type Elastomeric Bearings" width={96} height={80} loading="eager" className="w-full h-full object-cover" />
               </div>
               <div>
                 <h4 className="font-semibold">F-Type Elastomeric Bearings</h4>

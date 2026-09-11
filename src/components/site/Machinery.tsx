@@ -7,7 +7,8 @@ import expansion from "@/assets/expansion.jpg";
 import spherical from "@/assets/spherical.jpg";
 import pinBearing from "@/assets/pinbearing.jpg";
 import rocker from "@/assets/rocker.jpg";
-import fTypeBearingImage from "@/assets/F-TYPE ELASTOMERIC BEARINGS.jpeg";
+
+const fTypeBearingImage = "/f-type-elastomeric-bearings.jpeg";
 
 const machines = [
   { img: pot, title: "Pot Cum PTFE Bearing", specs: ["High load capacity", "Rotational movement support", "Structural stability"] },
@@ -56,6 +57,8 @@ export function Machinery() {
                   <img
                     src={m.img}
                     alt={m.title}
+                    width={640}
+                    height={360}
                     loading={m.title === "F-Type Elastomeric Bearings" ? "eager" : "lazy"}
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                   />

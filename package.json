@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vite dev",
     "build": "vite build",
-    "predeploy": "npm run build",
+    "predeploy": "npm run build && node -e \"const fs=require('fs'); fs.copyFileSync('public/f-type-elastomeric-bearings.jpeg','dist/client/f-type-elastomeric-bearings.jpeg')\"",
     "deploy": "npx wrangler deploy --outdir dist/server --no-bundle",
     "build:dev": "vite build --mode development",
     "preview": "vite preview",
