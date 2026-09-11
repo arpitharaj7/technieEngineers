@@ -19,7 +19,7 @@ const machines = [
   {
     img: fTypeElastomeric,
     title: "F-Type Elastomeric Bearings",
-    description: "Factory-manufactured bearings that support vertical loads, allow horizontal flexibility, and help dampen bridge vibration.",
+    description: "Factory-manufactured bridge bearings designed for vertical loads, horizontal flexibility, and vibration control.",
     specs: ["Vertical load support", "Horizontal flexibility", "Vibration damping"],
   },
 ];
