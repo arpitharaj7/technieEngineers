@@ -28,7 +28,7 @@ export function Contact() {
                 href: "https://drive.google.com/file/d/1cx2pPNyzblpDA6JjNCCa7QiIr6KrRsU6/view?usp=sharing",
               },
               { icon: MapPin, label: "Office Address", value: "G-123, Dwarka Dham, Shivaya Modipuram, Meerut (U.P)" },
-              { icon: MapPin, label: "Works Unit", value: "Plot No. G-56, Phase-1, UPSIDC Industrial Area, Ghaziabad (U.P)" },
+              { icon: MapPin, label: "Works Unit", value: "Plot No. G-56, Phase-1, UPSIDC Industrial Area, Hapur (U.P)" },
               { icon: Phone, label: "Phone", value: "+91 9058871092, +91 7017985564", href: "tel:+919058871092" },
               { icon: Mail, label: "Email", value: "technieengineers@gmail.com", href: "mailto:technieengineers@gmail.com" },
             ].map((c, i) => {
