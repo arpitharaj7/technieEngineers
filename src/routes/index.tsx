@@ -12,6 +12,7 @@ import { Contact } from "@/components/site/Contact";
 import { Footer } from "@/components/site/Footer";
 import { WhatsAppButton } from "@/components/site/WhatsAppButton";
 import { Loader } from "@/components/site/Loader";
+import { VendorApproval } from "@/components/site/VendorApproval";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -38,6 +39,7 @@ function Index() {
         <Hero />
         <About />
         <Machinery />
+        <VendorApproval />
         <WhyUs />
         <Gallery />
         <Testimonials />
