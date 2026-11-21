@@ -22,6 +22,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import partnershipDeedUrl from "@/assets/deed.pdf?url";
 import isoApprovalImage from "@/assets/ISO-approval.jpg.png";
 import rdsoCertificateUrl from "@/assets/RDSO.pdf?url";
 
@@ -49,7 +50,7 @@ const approvalDetails = [
           <dd className="mt-1 font-semibold text-slate-900">
             Refer to the{" "}
             <a
-              href="https://drive.google.com/file/d/19QrTAERBWGvhsywerpoT5TV3oirCdkvt/view?usp=sharing"
+              href={partnershipDeedUrl}
               target="_blank"
               rel="noreferrer"
               className="text-primary underline underline-offset-4"
@@ -62,7 +63,7 @@ const approvalDetails = [
           <dt className="text-xs text-slate-500">Partnership Deed</dt>
           <dd className="mt-1 font-semibold">
             <a
-              href="https://drive.google.com/file/d/19QrTAERBWGvhsywerpoT5TV3oirCdkvt/view?usp=sharing"
+              href={partnershipDeedUrl}
               target="_blank"
               rel="noreferrer"
               className="text-primary underline underline-offset-4"

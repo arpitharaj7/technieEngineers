@@ -3,6 +3,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { Building2, Briefcase, TrendingUp, FileCheck, Users, Award, Truck, ShieldCheck, X } from "lucide-react";
 import partnersImage from "@/assets/partners.jpg";
 import isoApprovalImage from "@/assets/ISO-approval.jpg.png";
+import partnershipDeedUrl from "@/assets/deed.pdf?url";
 
 type Fact = {
   icon: typeof Building2;
@@ -22,7 +23,7 @@ const facts: Fact[] = [
     value: "Partnership",
     image: partnersImage,
     actionLabel: "Open Partnership Deed",
-    actionHref: "https://drive.google.com/file/d/19QrTAERBWGvhsywerpoT5TV3oirCdkvt/view?usp=sharing",
+    actionHref: partnershipDeedUrl,
   },
   {
     icon: FileCheck,
