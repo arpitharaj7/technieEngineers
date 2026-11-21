@@ -59,11 +59,7 @@ const approvalDetails = [
         </div>
         <div className="rounded-xl bg-slate-50 p-4">
           <dt className="text-xs text-slate-500">GST Registration Number</dt>
-          <dd className="mt-1 font-semibold text-slate-900">
-            <a href="tel:+917417271092" className="text-primary underline underline-offset-4">
-              Contact us for details
-            </a>
-          </dd>
+          <dd className="mt-1 font-semibold text-slate-900">09AAWFT0332N1ZJ</dd>
         </div>
         <div className="rounded-xl bg-slate-50 p-4">
           <dt className="text-xs text-slate-500">Contact Information</dt>
