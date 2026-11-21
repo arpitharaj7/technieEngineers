@@ -30,10 +30,75 @@ const approvalDetails = [
     summary: "Company ownership and legal information",
     content: (
       <dl className="grid gap-3 text-sm sm:grid-cols-2">
-        <div className="rounded-xl bg-slate-50 p-4"><dt className="text-xs text-slate-500">Legal Name</dt><dd className="mt-1 font-semibold text-slate-900">Technie Engineers</dd></div>
-        <div className="rounded-xl bg-slate-50 p-4"><dt className="text-xs text-slate-500">Registered Office</dt><dd className="mt-1 font-semibold text-slate-900">Meerut, Uttar Pradesh, India</dd></div>
-        <div className="rounded-xl bg-slate-50 p-4"><dt className="text-xs text-slate-500">Contact</dt><dd className="mt-1 font-semibold text-slate-900">+91 74172 71092</dd></div>
-        <div className="rounded-xl bg-slate-50 p-4"><dt className="text-xs text-slate-500">Business Category</dt><dd className="mt-1 font-semibold text-slate-900">Bridge Bearings & Infrastructure Solutions</dd></div>
+        <div className="rounded-xl bg-slate-50 p-4">
+          <dt className="text-xs text-slate-500">Legal Name</dt>
+          <dd className="mt-1 font-semibold text-slate-900">Technie Engineers</dd>
+        </div>
+        <div className="rounded-xl bg-slate-50 p-4">
+          <dt className="text-xs text-slate-500">Constitution of Business</dt>
+          <dd className="mt-1 font-semibold text-slate-900">Partnership</dd>
+        </div>
+        <div className="rounded-xl bg-slate-50 p-4">
+          <dt className="text-xs text-slate-500">Registered Office Address</dt>
+          <dd className="mt-1 font-semibold text-slate-900">Meerut, Uttar Pradesh, India</dd>
+        </div>
+        <div className="rounded-xl bg-slate-50 p-4">
+          <dt className="text-xs text-slate-500">Partners</dt>
+          <dd className="mt-1 font-semibold text-slate-900">
+            Refer to the{" "}
+            <a
+              href="https://drive.google.com/file/d/19QrTAERBWGvhsywerpoT5TV3oirCdkvt/view?usp=sharing"
+              target="_blank"
+              rel="noreferrer"
+              className="text-primary underline underline-offset-4"
+            >
+              Partnership Deed
+            </a>
+          </dd>
+        </div>
+        <div className="rounded-xl bg-slate-50 p-4">
+          <dt className="text-xs text-slate-500">Partnership Deed</dt>
+          <dd className="mt-1 font-semibold">
+            <a
+              href="https://drive.google.com/file/d/19QrTAERBWGvhsywerpoT5TV3oirCdkvt/view?usp=sharing"
+              target="_blank"
+              rel="noreferrer"
+              className="text-primary underline underline-offset-4"
+            >
+              View Partnership Deed
+            </a>
+          </dd>
+        </div>
+        <div className="rounded-xl bg-slate-50 p-4">
+          <dt className="text-xs text-slate-500">GST Registration Number</dt>
+          <dd className="mt-1 font-semibold text-slate-900">
+            <a href="tel:+917417271092" className="text-primary underline underline-offset-4">
+              Contact us for details
+            </a>
+          </dd>
+        </div>
+        <div className="rounded-xl bg-slate-50 p-4">
+          <dt className="text-xs text-slate-500">Contact Information</dt>
+          <dd className="mt-1 font-semibold">
+            <a href="tel:+917417271092" className="text-primary underline underline-offset-4">
+              +91 74172 71092
+            </a>
+          </dd>
+        </div>
+        <div className="rounded-xl bg-slate-50 p-4">
+          <dt className="text-xs text-slate-500">Download GST Certificate</dt>
+          <dd className="mt-1 font-semibold">
+            <a href="tel:+917417271092" className="text-primary underline underline-offset-4">
+              Contact us to request a copy
+            </a>
+          </dd>
+        </div>
+        <div className="rounded-xl bg-slate-50 p-4">
+          <dt className="text-xs text-slate-500">Business Category</dt>
+          <dd className="mt-1 font-semibold text-slate-900">
+            Bridge Bearings & Infrastructure Solutions
+          </dd>
+        </div>
       </dl>
     ),
   },
