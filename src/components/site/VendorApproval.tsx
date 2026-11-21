@@ -41,8 +41,15 @@ const approvalDetails = [
           <dd className="mt-1 font-semibold text-slate-900">Partnership</dd>
         </div>
         <div className="rounded-xl bg-slate-50 p-4">
+          <dt className="text-xs text-slate-500">Partners</dt>
+          <dd className="mt-1 font-semibold text-slate-900">
+            <span className="block">1. Anish Pushpan</span>
+            <span className="block">2. Sherlin K Prakash</span>
+          </dd>
+        </div>
+        <div className="rounded-xl bg-slate-50 p-4">
           <dt className="text-xs text-slate-500">Registered Office Address</dt>
-          <dd className="mt-1 font-semibold text-slate-900">Meerut, Uttar Pradesh, India</dd>
+          <dd className="mt-1 font-semibold text-slate-900">G-123 Dwarika Dham, Shivaya Modipuram, Meerut (U.P)</dd>
         </div>
         <div className="rounded-xl bg-slate-50 p-4">
           <dt className="text-xs text-slate-500">Partnership Deed</dt>
@@ -101,7 +108,7 @@ const approvalDetails = [
           <div className="rounded-xl bg-slate-50 p-4">
             <dt className="font-semibold text-slate-900">Manufacturing Unit Address</dt>
             <dd className="mt-1 text-slate-600">
-              G-123, Dwarka Dham, Shivaya Modipuram, Meerut (U.P)
+              G-56 Phase-1, UPSIDC M.G Road Hapur, Uttar Pradesh, 201015
             </dd>
           </div>
         </dl>
@@ -115,11 +122,67 @@ const approvalDetails = [
             ensure smooth production flow and quality compliance.
           </p>
         </div>
+        <a
+          href="https://drive.google.com/file/d/1Ysc2LGufj7l7HcD1CZflqyzAUZ3eXDxx/view?usp=drive_link"
+          target="_blank"
+          rel="noreferrer"
+          className="inline-flex font-semibold text-primary underline underline-offset-4"
+        >
+          View Photographs
+        </a>
       </div>
     ),
   },
-  { title: "List of Testing Facilities", icon: Gauge, summary: "Available testing laboratories and inspection facilities", content: <p>Our testing facilities include in-house quality checks and equipment for product verification, dimensional inspection and performance assessment.</p> },
-  { title: "List of Tools, Plants & Machineries", icon: Wrench, summary: "Production tools, plant equipment and machinery", content: <p>This section contains the complete list of tools, production plants and machinery used across the manufacturing process.</p> },
+  {
+    title: "List of Testing Facilities",
+    icon: Gauge,
+    summary: "Available testing laboratories and inspection facilities",
+    content: (
+      <div className="space-y-3">
+        <p>
+          Our testing facilities include in-house quality checks and equipment for product
+          verification, dimensional inspection and performance assessment.
+        </p>
+        <a
+          href="https://drive.google.com/file/d/1y605NMdH7Vy1ckWNLMt1ulH9wSUT8eou/view?usp=sharing"
+          target="_blank"
+          rel="noreferrer"
+          className="flex font-semibold text-primary underline underline-offset-4"
+        >
+          View Photographs
+        </a>
+        <a
+          href="https://drive.google.com/file/d/1QAH9-vQaej0oYrZhrZSiFRRv4RKDaMSc/view?usp=sharing"
+          target="_blank"
+          rel="noreferrer"
+          className="flex font-semibold text-primary underline underline-offset-4"
+        >
+          View List of Testing
+        </a>
+      </div>
+    ),
+  },
+  {
+    title: "List of Tools, Plants & Machineries",
+    icon: Wrench,
+    summary: "Production tools, plant equipment and machinery",
+    content: (
+      <div className="space-y-3">
+        <p>
+          This section contains the complete list of tools, production plants and machinery used
+          across the manufacturing process.
+        </p>
+        <a
+          href="https://drive.google.com/file/d/1saZGSlcXCxcZr2q5TvFnw9qYXdD3oFtc/view?usp=sharing"
+          target="_blank"
+          rel="noreferrer"
+          className="inline-flex font-semibold text-primary underline underline-offset-4"
+        >
+          View List of Tools and Machinery
+        </a>
+      </div>
+    ),
+  },
   {
     title: "RDSO Approval Details",
     icon: BadgeCheck,
@@ -133,15 +196,60 @@ const approvalDetails = [
         <a
           href={rdsoCertificateUrl}
           download="RDSO.pdf"
-          className="inline-flex font-semibold text-primary underline underline-offset-4"
+          className="flex font-semibold text-primary underline underline-offset-4"
         >
           Download RDSO Certificate (PDF)
+        </a>
+        <a
+          href="https://drive.google.com/file/d/1Ow0Zs5TNu0UCNs0N_e_SJ9Na2dkD44Ru/view?usp=sharing"
+          target="_blank"
+          rel="noreferrer"
+          className="flex font-semibold text-primary underline underline-offset-4"
+        >
+          Open RDSO Certificate Online
         </a>
       </div>
     ),
   },
-  { title: "MSME Registration", icon: Building2, summary: "Micro, Small and Medium Enterprises registration", content: <p>MSME registration details and the applicable Udyam registration certificate can be reviewed here.</p> },
-  { title: "Factory License", icon: FileCheck2, summary: "Valid licence and factory compliance documents", content: <p>Factory licence details and supporting statutory approvals are listed in this section.</p> },
+  {
+    title: "MSME Registration",
+    icon: Building2,
+    summary: "Micro, Small and Medium Enterprises registration",
+    content: (
+      <div className="space-y-3">
+        <p>
+          MSME registration details and the applicable Udyam registration certificate can be
+          reviewed here.
+        </p>
+        <a
+          href="https://drive.google.com/file/d/1ds3ox0EtDjcquVxx2kEOxpApmyjycRNJ/view?usp=drive_link"
+          target="_blank"
+          rel="noreferrer"
+          className="inline-flex font-semibold text-primary underline underline-offset-4"
+        >
+          Open MSME Registration Certificate
+        </a>
+      </div>
+    ),
+  },
+  {
+    title: "Factory License",
+    icon: FileCheck2,
+    summary: "Valid licence and factory compliance documents",
+    content: (
+      <div className="space-y-3">
+        <p>Factory licence details and supporting statutory approvals are listed in this section.</p>
+        <a
+          href="https://drive.google.com/file/d/1oF8Z_sQIMgv_agveFFusBwS17e9HcAYa/view?usp=sharing"
+          target="_blank"
+          rel="noreferrer"
+          className="inline-flex font-semibold text-primary underline underline-offset-4"
+        >
+          View Factory License
+        </a>
+      </div>
+    ),
+  },
   {
     title: "ISO 9001 Certification",
     icon: ShieldCheck,
@@ -163,9 +271,69 @@ const approvalDetails = [
       </div>
     ),
   },
-  { title: "Organisation Chart", icon: Network, summary: "Management structure and reporting hierarchy", content: <p>The organisation chart represents the management, engineering, production, quality and administration structure.</p> },
-  { title: "Testing Facilities as per Para 6.4 of STR", icon: PackageCheck, summary: "Testing capability information under applicable STR requirements", content: <p>This section records the testing and inspection facilities maintained in accordance with the relevant Specification for Tender Requirements.</p> },
-  { title: "Mandatory Approvals", icon: FileText, summary: "Statutory and regulatory approvals", content: <p>Mandatory approvals, certificates and compliance records relevant to manufacturing and supply operations are presented here.</p> },
+  {
+    title: "Organisation Chart",
+    icon: Network,
+    summary: "Management structure and reporting hierarchy",
+    content: (
+      <div className="space-y-3">
+        <p>
+          The organisation chart represents the management, engineering, production, quality and
+          administration structure.
+        </p>
+        <a
+          href="https://drive.google.com/file/d/169xNI2LqrhlKqOxKVyTPv7wSuoufY1-g/view?usp=sharing"
+          target="_blank"
+          rel="noreferrer"
+          className="inline-flex font-semibold text-primary underline underline-offset-4"
+        >
+          View Organisation Chart
+        </a>
+      </div>
+    ),
+  },
+  {
+    title: "Testing Facilities as per Para 6.4 of STR",
+    icon: PackageCheck,
+    summary: "Testing capability information under applicable STR requirements",
+    content: (
+      <div className="space-y-3">
+        <p>
+          This section records the testing and inspection facilities maintained in accordance
+          with the relevant Specification for Tender Requirements.
+        </p>
+        <a
+          href="https://drive.google.com/file/d/1QAH9-vQaej0oYrZhrZSiFRRv4RKDaMSc/view?usp=drive_link"
+          target="_blank"
+          rel="noreferrer"
+          className="inline-flex font-semibold text-primary underline underline-offset-4"
+        >
+          View Testing Facilities
+        </a>
+      </div>
+    ),
+  },
+  {
+    title: "Mandatory Approvals",
+    icon: FileText,
+    summary: "Statutory and regulatory approvals",
+    content: (
+      <div className="space-y-3">
+        <p>
+          Mandatory approvals, certificates and compliance records relevant to manufacturing and
+          supply operations are presented here.
+        </p>
+        <a
+          href="https://drive.google.com/file/d/1U-G8gO-P8hbW2BpzwOXVpJqs6WcHYNZ3/view?usp=sharing"
+          target="_blank"
+          rel="noreferrer"
+          className="inline-flex font-semibold text-primary underline underline-offset-4"
+        >
+          View Mandatory Approvals
+        </a>
+      </div>
+    ),
+  },
   {
     title: "Artisans",
     icon: HardHat,
