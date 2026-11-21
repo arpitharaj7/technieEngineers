@@ -61,7 +61,7 @@ const approvalDetails = [
         </div>
         <div className="rounded-xl bg-slate-50 p-4">
           <dt className="text-xs text-slate-500">Partnership Deed</dt>
-          <dd className="mt-1 font-semibold">
+          <dd className="mt-1 flex flex-col items-start gap-2 font-semibold">
             <a
               href={partnershipDeedUrl}
               target="_blank"
@@ -69,6 +69,14 @@ const approvalDetails = [
               className="text-primary underline underline-offset-4"
             >
               View Partnership Deed
+            </a>
+            <a
+              href="https://drive.google.com/file/d/1PJJ4gOafnAhkVawx0rzadRsKDV7qpfbP/view?usp=drive_link"
+              target="_blank"
+              rel="noreferrer"
+              className="text-primary underline underline-offset-4"
+            >
+              Open Google Drive Copy
             </a>
           </dd>
         </div>
