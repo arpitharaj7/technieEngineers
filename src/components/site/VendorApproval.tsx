@@ -102,7 +102,33 @@ const approvalDetails = [
       </dl>
     ),
   },
-  { title: "Manufacturing Unit", icon: Factory, summary: "Manufacturing location, capacity and operations", content: <p>Details of our manufacturing unit, production capacity and operational facilities can be provided in the approved vendor documentation.</p> },
+  {
+    title: "Manufacturing Unit",
+    icon: Factory,
+    summary: "Manufacturing location, capacity and operations",
+    content: (
+      <div className="space-y-5">
+        <dl className="grid gap-3 text-sm sm:grid-cols-[minmax(11rem,0.8fr)_1.2fr]">
+          <div className="rounded-xl bg-slate-50 p-4">
+            <dt className="font-semibold text-slate-900">Manufacturing Unit Address</dt>
+            <dd className="mt-1 text-slate-600">
+              Khasra No. 625, Nalpur, Kharkhoda, Meerut, Uttar Pradesh - 245206
+            </dd>
+          </div>
+        </dl>
+        <div>
+          <h3 className="text-sm font-semibold text-primary">Plant &amp; Machinery</h3>
+          <p className="mt-2 rounded-r-xl border-l-4 border-primary bg-slate-50 p-4 leading-7 text-slate-600">
+            Our manufacturing facility is equipped with advanced machinery for the production of
+            elastomeric bearings, including rubber mixing units, moulding presses, vulcanizing
+            equipment, cutting and drilling machines, fabrication tools, and quality testing
+            equipment. The plant also includes dedicated blasting, painting, and stacking areas to
+            ensure smooth production flow and quality compliance.
+          </p>
+        </div>
+      </div>
+    ),
+  },
   { title: "List of Testing Facilities", icon: Gauge, summary: "Available testing laboratories and inspection facilities", content: <p>Our testing facilities include in-house quality checks and equipment for product verification, dimensional inspection and performance assessment.</p> },
   { title: "List of Tools, Plants & Machineries", icon: Wrench, summary: "Production tools, plant equipment and machinery", content: <p>This section contains the complete list of tools, production plants and machinery used across the manufacturing process.</p> },
   { title: "RDSO Approval Details", icon: BadgeCheck, summary: "RDSO vendor approval and registration information", content: <p>Official RDSO approval details, vendor registration information and validity documents are listed here.</p> },
