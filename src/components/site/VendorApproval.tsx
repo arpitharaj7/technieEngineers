@@ -170,7 +170,27 @@ const approvalDetails = [
   { title: "Organisation Chart", icon: Network, summary: "Management structure and reporting hierarchy", content: <p>The organisation chart represents the management, engineering, production, quality and administration structure.</p> },
   { title: "Testing Facilities as per Para 6.4 of STR", icon: PackageCheck, summary: "Testing capability information under applicable STR requirements", content: <p>This section records the testing and inspection facilities maintained in accordance with the relevant Specification for Tender Requirements.</p> },
   { title: "Mandatory Approvals", icon: FileText, summary: "Statutory and regulatory approvals", content: <p>Mandatory approvals, certificates and compliance records relevant to manufacturing and supply operations are presented here.</p> },
-  { title: "Artisans", icon: HardHat, summary: "Skilled workforce and technical artisans", content: <p>Details of qualified artisans and skilled personnel involved in fabrication, assembly and quality operations are available in this section.</p> },
+  {
+    title: "Artisans",
+    icon: HardHat,
+    summary: "Skilled workforce and technical artisans",
+    content: (
+      <div className="space-y-3">
+        <p>
+          Details of qualified artisans and skilled personnel involved in fabrication, assembly and
+          quality operations are available in this section.
+        </p>
+        <a
+          href="https://drive.google.com/file/d/1cx2pPNyzblpDA6JjNCCa7QiIr6KrRsU6/view"
+          target="_blank"
+          rel="noreferrer"
+          className="inline-flex font-semibold text-primary underline underline-offset-4"
+        >
+          Open Artisans Details
+        </a>
+      </div>
+    ),
+  },
   { title: "Power Demand & Installed Power Supply", icon: PlugZap, summary: "Power requirement and installed electrical capacity", content: <p>Information about connected power demand, installed power supply and backup arrangements is documented here.</p> },
   { title: "Details Of Executed Works / Supplies In Last 5 Years", icon: Hammer, summary: "Recent completed projects and supply records", content: <p>Our major completed bridge engineering works and supplied products are summarised here, including relevant project and client details.</p> },
   { title: "Work In Hand", icon: Users, summary: "Current projects and ongoing orders", content: <p>Active project, production and supply commitments currently in progress are listed in this section.</p> },
