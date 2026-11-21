@@ -112,7 +112,7 @@ const approvalDetails = [
           <div className="rounded-xl bg-slate-50 p-4">
             <dt className="font-semibold text-slate-900">Manufacturing Unit Address</dt>
             <dd className="mt-1 text-slate-600">
-              Khasra No. 625, Nalpur, Kharkhoda, Meerut, Uttar Pradesh - 245206
+              G-123, Dwarka Dham, Shivaya Modipuram, Meerut (U.P)
             </dd>
           </div>
         </dl>
