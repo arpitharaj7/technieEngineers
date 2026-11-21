@@ -22,7 +22,6 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import partnershipDeedUrl from "@/assets/deed.pdf?url";
 import isoApprovalImage from "@/assets/ISO-approval.jpg.png";
 import rdsoCertificateUrl from "@/assets/RDSO.pdf?url";
 
@@ -46,37 +45,15 @@ const approvalDetails = [
           <dd className="mt-1 font-semibold text-slate-900">Meerut, Uttar Pradesh, India</dd>
         </div>
         <div className="rounded-xl bg-slate-50 p-4">
-          <dt className="text-xs text-slate-500">Partners</dt>
-          <dd className="mt-1 font-semibold text-slate-900">
-            Refer to the{" "}
-            <a
-              href={partnershipDeedUrl}
-              target="_blank"
-              rel="noreferrer"
-              className="text-primary underline underline-offset-4"
-            >
-              Partnership Deed
-            </a>
-          </dd>
-        </div>
-        <div className="rounded-xl bg-slate-50 p-4">
           <dt className="text-xs text-slate-500">Partnership Deed</dt>
           <dd className="mt-1 flex flex-col items-start gap-2 font-semibold">
-            <a
-              href={partnershipDeedUrl}
-              target="_blank"
-              rel="noreferrer"
-              className="text-primary underline underline-offset-4"
-            >
-              View Partnership Deed
-            </a>
             <a
               href="https://drive.google.com/file/d/1PJJ4gOafnAhkVawx0rzadRsKDV7qpfbP/view?usp=drive_link"
               target="_blank"
               rel="noreferrer"
               className="text-primary underline underline-offset-4"
             >
-              Open Google Drive Copy
+              Open Deed
             </a>
           </dd>
         </div>
