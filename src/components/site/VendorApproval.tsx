@@ -22,7 +22,6 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import partnershipDeedUrl from "@/assets/deed.pdf?url";
 import isoApprovalImage from "@/assets/ISO-approval.jpg.png";
 import rdsoCertificateUrl from "@/assets/RDSO.pdf?url";
 
@@ -44,20 +43,6 @@ const approvalDetails = [
         <div className="rounded-xl bg-slate-50 p-4">
           <dt className="text-xs text-slate-500">Registered Office Address</dt>
           <dd className="mt-1 font-semibold text-slate-900">Meerut, Uttar Pradesh, India</dd>
-        </div>
-        <div className="rounded-xl bg-slate-50 p-4">
-          <dt className="text-xs text-slate-500">Partners</dt>
-          <dd className="mt-1 font-semibold text-slate-900">
-            Refer to the{" "}
-            <a
-              href={partnershipDeedUrl}
-              target="_blank"
-              rel="noreferrer"
-              className="text-primary underline underline-offset-4"
-            >
-              Partnership Deed
-            </a>
-          </dd>
         </div>
         <div className="rounded-xl bg-slate-50 p-4">
           <dt className="text-xs text-slate-500">Partnership Deed</dt>
@@ -91,8 +76,13 @@ const approvalDetails = [
         <div className="rounded-xl bg-slate-50 p-4">
           <dt className="text-xs text-slate-500">Download GST Certificate</dt>
           <dd className="mt-1 font-semibold">
-            <a href="tel:+917417271092" className="text-primary underline underline-offset-4">
-              Contact us to request a copy
+            <a
+              href="https://drive.google.com/file/d/1RzIDuvwPugzdrmocEdmbvNjle6ymhyN1/view?usp=drive_link"
+              target="_blank"
+              rel="noreferrer"
+              className="text-primary underline underline-offset-4"
+            >
+              Open GST Certificate
             </a>
           </dd>
         </div>
