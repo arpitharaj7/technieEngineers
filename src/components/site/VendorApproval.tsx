@@ -22,6 +22,8 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import isoApprovalImage from "@/assets/ISO-approval.jpg.png";
+import rdsoCertificateUrl from "@/assets/RDSO.pdf?url";
 
 const approvalDetails = [
   {
@@ -131,10 +133,49 @@ const approvalDetails = [
   },
   { title: "List of Testing Facilities", icon: Gauge, summary: "Available testing laboratories and inspection facilities", content: <p>Our testing facilities include in-house quality checks and equipment for product verification, dimensional inspection and performance assessment.</p> },
   { title: "List of Tools, Plants & Machineries", icon: Wrench, summary: "Production tools, plant equipment and machinery", content: <p>This section contains the complete list of tools, production plants and machinery used across the manufacturing process.</p> },
-  { title: "RDSO Approval Details", icon: BadgeCheck, summary: "RDSO vendor approval and registration information", content: <p>Official RDSO approval details, vendor registration information and validity documents are listed here.</p> },
+  {
+    title: "RDSO Approval Details",
+    icon: BadgeCheck,
+    summary: "RDSO vendor approval and registration information",
+    content: (
+      <div className="space-y-3">
+        <p>
+          Official RDSO approval details, vendor registration information and validity documents
+          are listed here.
+        </p>
+        <a
+          href={rdsoCertificateUrl}
+          download="RDSO.pdf"
+          className="inline-flex font-semibold text-primary underline underline-offset-4"
+        >
+          Download RDSO Certificate (PDF)
+        </a>
+      </div>
+    ),
+  },
   { title: "MSME Registration", icon: Building2, summary: "Micro, Small and Medium Enterprises registration", content: <p>MSME registration details and the applicable Udyam registration certificate can be reviewed here.</p> },
   { title: "Factory License", icon: FileCheck2, summary: "Valid licence and factory compliance documents", content: <p>Factory licence details and supporting statutory approvals are listed in this section.</p> },
-  { title: "ISO 9001 Certification", icon: ShieldCheck, summary: "Quality management system certification", content: <p>ISO 9001 certification demonstrates our commitment to controlled quality processes, documented procedures and continual improvement.</p> },
+  {
+    title: "ISO 9001 Certification",
+    icon: ShieldCheck,
+    summary: "Quality management system certification",
+    content: (
+      <div className="space-y-3">
+        <p>
+          ISO 9001 certification demonstrates our commitment to controlled quality processes,
+          documented procedures and continual improvement.
+        </p>
+        <a
+          href={isoApprovalImage}
+          target="_blank"
+          rel="noreferrer"
+          className="inline-flex font-semibold text-primary underline underline-offset-4"
+        >
+          View ISO 9001:2015 Certificate
+        </a>
+      </div>
+    ),
+  },
   { title: "Organisation Chart", icon: Network, summary: "Management structure and reporting hierarchy", content: <p>The organisation chart represents the management, engineering, production, quality and administration structure.</p> },
   { title: "Testing Facilities as per Para 6.4 of STR", icon: PackageCheck, summary: "Testing capability information under applicable STR requirements", content: <p>This section records the testing and inspection facilities maintained in accordance with the relevant Specification for Tender Requirements.</p> },
   { title: "Mandatory Approvals", icon: FileText, summary: "Statutory and regulatory approvals", content: <p>Mandatory approvals, certificates and compliance records relevant to manufacturing and supply operations are presented here.</p> },
