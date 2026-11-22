@@ -188,26 +188,67 @@ const approvalDetails = [
     icon: BadgeCheck,
     summary: "RDSO vendor approval and registration information",
     content: (
-      <div className="space-y-3">
-        <p>
-          Official RDSO approval details, vendor registration information and validity documents
-          are listed here.
-        </p>
-        <a
-          href={rdsoCertificateUrl}
-          download="RDSO.pdf"
-          className="flex font-semibold text-primary underline underline-offset-4"
-        >
-          Download RDSO Certificate (PDF)
-        </a>
-        <a
-          href="https://drive.google.com/file/d/1Ow0Zs5TNu0UCNs0N_e_SJ9Na2dkD44Ru/view?usp=sharing"
-          target="_blank"
-          rel="noreferrer"
-          className="flex font-semibold text-primary underline underline-offset-4"
-        >
-          Open RDSO Certificate Online
-        </a>
+      <div className="overflow-hidden rounded-lg bg-white">
+        <div className="grid gap-5 p-5 sm:grid-cols-2">
+          {[
+            {
+              title: "ELASTOMERIC BEARINGS",
+              rows: [
+                ["Registration ID", "30221"],
+                ["Annual Production Capacity", "8000"],
+                ["Approval Date", "30/12/2025"],
+                ["Next Quality Audit", "28/12/2030"],
+              ],
+            },
+            {
+              title: "POT CUM PTFE BEARINGS",
+              rows: [
+                ["Registration ID", "28881"],
+                ["Annual Production Capacity", "800"],
+                ["Approval Date", "20/08/2025"],
+                ["Next Quality Audit", "18/08/2030"],
+              ],
+            },
+          ].map((card) => (
+            <div
+              key={card.title}
+              className="rounded-lg bg-[#59a1e8] px-6 py-5 text-white shadow-sm"
+            >
+              <h4 className="text-center text-base font-semibold uppercase tracking-wide">
+                {card.title}
+              </h4>
+              <dl className="mt-5">
+                {card.rows.map(([label, value]) => (
+                  <div
+                    key={label}
+                    className="flex items-center justify-between gap-4 border-b border-white/30 py-2.5 last:border-b-0"
+                  >
+                    <dt className="text-sm">{label}</dt>
+                    <dd className="shrink-0 text-sm font-medium text-right">{value}</dd>
+                  </div>
+                ))}
+              </dl>
+            </div>
+          ))}
+
+          <div className="sm:col-span-2 flex flex-wrap gap-x-5 gap-y-2">
+            <a
+              href={rdsoCertificateUrl}
+              download="RDSO.pdf"
+              className="font-semibold text-primary underline underline-offset-4"
+            >
+              Download RDSO Certificate (PDF)
+            </a>
+            <a
+              href="https://drive.google.com/file/d/1Ow0Zs5TNu0UCNs0N_e_SJ9Na2dkD44Ru/view?usp=sharing"
+              target="_blank"
+              rel="noreferrer"
+              className="font-semibold text-primary underline underline-offset-4"
+            >
+              Open RDSO Certificate Online
+            </a>
+          </div>
+        </div>
       </div>
     ),
   },
