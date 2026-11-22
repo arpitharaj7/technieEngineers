@@ -365,10 +365,18 @@ const approvalDetails = [
           supply operations are presented here.
         </p>
         <a
+          href="https://drive.google.com/file/d/13Jr-bercHm0NNQXLLy_prKLeUw3C9uBI/view?usp=sharing"
+          target="_blank"
+          rel="noreferrer"
+          className="block font-semibold text-primary underline underline-offset-4"
+        >
+          Laboratory MOU
+        </a>
+        <a
           href="https://drive.google.com/file/d/1U-G8gO-P8hbW2BpzwOXVpJqs6WcHYNZ3/view?usp=sharing"
           target="_blank"
           rel="noreferrer"
-          className="inline-flex font-semibold text-primary underline underline-offset-4"
+          className="block font-semibold text-primary underline underline-offset-4"
         >
           View Mandatory Approvals
         </a>
